@@ -1,0 +1,54 @@
+{
+  "name": "@create-htl-typescript/api",
+  "version": "1.0.0",
+  "license": "AGPL-3.0",
+  "scripts": {
+    "start": "node build/server.js",
+    "dev": "ts-node-dev --respawn --no-notify --transpile-only -r tsconfig-paths/register src/server.ts",
+    "creation": "./bin/creation",
+    "migration:create": "typeorm migration:create -n",
+    "typeorm": "ts-node-dev --transpile-only -r tsconfig-paths/register ../../../node_modules/typeorm/cli.js",
+    "schema:sync": "yarn build && yarn cross-env NODE_ENV=production yarn typeorm schema:sync",
+    "build": "run prebuild && run -T babel src --extensions \".js,.ts\" --out-dir build --copy-files --no-copy-ignored",
+    "prebuild": "run -T rimraf build"
+  },
+  "repository": {
+    "type": "git",
+    "directory": "apps/server/api"
+  },
+  "dependencies": {
+    "@create-htl-typescript/utils": "*",
+    "aws-sdk": "2.879.0",
+    "bcryptjs": "2.4.3",
+    "cors": "2.8.5",
+    "dotenv-defaults": "2.0.1",
+    "express": "4.17.1",
+    "express-async-errors": "3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "1.4.2",
+    "multer-s3": "2.9.0",
+    "mysql2": "^2.2.5",
+    "nodemailer": "6.5.0",
+    "reflect-metadata": "0.1.13",
+    "typeorm": "^0.2.36",
+    "uuidv4": "6.2.7",
+    "yup": "0.32.9"
+  },
+  "devDependencies": {
+    "@types/aws-sdk": "2.7.0",
+    "@types/bcryptjs": "2.4.2",
+    "@types/cors": "2.8.10",
+    "@types/dotenv-defaults": "2.0.0",
+    "@types/express": "4.17.11",
+    "@types/jsonwebtoken": "8.5.1",
+    "@types/multer": "1.4.5",
+    "@types/multer-s3": "2.7.9",
+    "@types/nodemailer": "6.4.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "cross-env": "^7.0.3",
+    "gluegun": "^4.6.1",
+    "ts-node": "^10.2.0",
+    "ts-node-dev": "1.1.6",
+    "tsconfig-paths": "3.9.0"
+  }
+}

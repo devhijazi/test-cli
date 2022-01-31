@@ -1,0 +1,72 @@
+/* Container */
+
+.main-container-base {
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: var(--box-spacing);
+  padding-right: var(--box-spacing);
+}
+
+.main-container-loose {
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-container {
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: var(--box-spacing);
+  padding-right: var(--box-spacing);
+}
+
+/* Box */
+
+.main-padding {
+  padding-left: var(--box-spacing);
+  padding-right: var(--box-spacing);
+  padding-top: var(--box-spacing);
+  padding-bottom: var(--box-spacing);
+}
+
+.main-padding-x {
+  padding-left: var(--box-spacing);
+  padding-right: var(--box-spacing);
+}
+
+.main-padding-y {
+  padding-top: var(--box-spacing);
+  padding-bottom: var(--box-spacing);
+}
+
+/* */
+
+.break-word {
+  hyphens: auto;
+
+  word-wrap: break-word;
+  word-break: break-word;
+
+  overflow-wrap: break-word;
+}
+
+.text-gradient {
+  background-clip: text;
+  background-size: 100%;
+  background-color: var(--colors-white);
+
+  -ms-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+
+  -ms-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
